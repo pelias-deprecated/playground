@@ -1,0 +1,26 @@
+{
+  "name": "pelias-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "for f in *.js; do node $f | node_modules/tap-spec/bin/cmd.js; done"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pelias/playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pelias/playground/issues"
+  },
+  "homepage": "https://github.com/pelias/playground",
+  "dependencies": {
+    "elastictest": "0.0.0"
+  },
+  "devDependencies": {
+    "tap-spec": "^0.2.0",
+    "tape": "^2.13.4"
+  }
+}
