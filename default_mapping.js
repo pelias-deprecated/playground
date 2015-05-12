@@ -54,7 +54,7 @@ test( '_default_ mapping - update existing mapping', function(t){
 
   var suite = new elastictest.Suite();
 
-  // update exiting index mapping
+  // update existing index mapping
   suite.action( function( done ){
     suite.client.indices.putMapping({
       index: suite.props.index,
@@ -81,7 +81,7 @@ test( '_default_ mapping - inherited when creating new types', function(t){
 
   var suite = new elastictest.Suite();
 
-  // update exiting index mapping
+  // update existing index mapping
   suite.action( function( done ){
     suite.client.indices.putMapping({
       index: suite.props.index,
