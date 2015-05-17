@@ -2,7 +2,7 @@
 var test = require('tape'),
     elastictest = require('elastictest');
 
-// ref: http://www.elastic.co/guide/en/elasticsearch/reference/1.5/analysis-ngram-tokenizer.html
+// ref: https://www.elastic.co/blog/searching-with-shingles
 
 var exampleMapping = {
   mappings: {
