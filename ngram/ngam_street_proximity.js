@@ -171,6 +171,23 @@ test.only( 'ngram street proximity', function(t){
       id: 2,
       body: {
         name: {
+          default: "mapzen place"
+        },
+        shingle: {
+          default: "mapzen place"
+        }
+      }
+    }, done);
+  });
+
+  // index
+  suite.action( function( done ){
+    suite.client.index({
+      index: suite.props.index,
+      type: 'mytype',
+      id: 3,
+      body: {
+        name: {
           default: "40 mapzen place"
         },
         shingle: {
@@ -199,10 +216,11 @@ test.only( 'ngram street proximity', function(t){
       type: 'mytype',
       body: q
     }, function( err, res ){
-      t.equal( res.hits.total, 2 );
+      t.equal( res.hits.total, 3 );
       var hits = res.hits.hits;
       t.equal( hits[0]._source.shingle.default, '40 mapzen place' );
       t.equal( hits[1]._source.shingle.default, '409 mapzen place' );
+      t.equal( hits[2]._source.shingle.default, 'mapzen place' );
       done();
     });
   });
