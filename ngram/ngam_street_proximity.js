@@ -10,7 +10,7 @@ var exampleMapping = {
       properties: {
         name: {
           dynamic : true,
-          type: 'object'
+          type: 'object',
         },
         shingle: {
           dynamic : true,
@@ -103,7 +103,9 @@ test.only( 'ngram street proximity', function(t){
                     "query": "40 mapzen place"
                   }
                 }
-              },
+              }
+            ],
+            "should": [
               {
                 "match": {
                   "shingle.default": {
