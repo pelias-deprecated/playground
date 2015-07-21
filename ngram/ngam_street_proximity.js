@@ -50,7 +50,7 @@ test.only( 'ngram street proximity', function(t){
       peliasTwoEdge : {
         "type": "custom",
         "tokenizer" : "standard",
-        "filter": ["lowercase","asciifolding","trim","ampersand","prefixOneDigitNumbers","peliasTwoEdgeGramFilter", "removeAllZeroNumericPrefix","unique","notnull"]
+        "filter": ["lowercase","asciifolding","trim","ampersand","prefixOneDigitNumbers","peliasTwoEdgeGramFilter","removeAllZeroNumericPrefix","unique","notnull"]
       },
       peliasShingles: {
         "tokenizer":"whitespace",
